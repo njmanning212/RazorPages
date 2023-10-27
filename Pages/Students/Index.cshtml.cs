@@ -25,7 +25,7 @@ namespace ContosoUniversity.Pages.Students
         {
             if (_context.Students != null)
             {
-                Student = await _context.Students.ToListAsync();
+                Student = await _context.Students.Take(10).ToListAsync();
             }
         }
     }
