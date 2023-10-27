@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/Kx8PzN5fckZFLJeLNw5m4d+bNqAvgx6ZCqi8OpiuhVKe4CW01Km2LgHarrU3kLTkVxGftLM2PWVbu4wTQouJg==",
+  "dgSpecHash": "4CgrGJ8ODP79vewxEZQAeq4H/Qi7pyEYHVtCaBXPrQkSEWKz/u6WTOEzJBg8Y15VVKF2lvF6++hAqSULvJR5zg==",
   "success": true,
   "projectFilePath": "/Users/pro/code/CSharp/ContosoUniversity/ContosoUniversity.csproj",
   "expectedPackageFiles": [
     "/Users/pro/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/pro/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
+    "/Users/pro/.nuget/packages/dotenv.net/3.1.2/dotenv.net.3.1.2.nupkg.sha512",
     "/Users/pro/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/pro/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/pro/.nuget/packages/humanizer.core.af/2.14.1/humanizer.core.af.2.14.1.nupkg.sha512",
