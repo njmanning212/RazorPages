@@ -22,7 +22,7 @@ namespace ContosoUniversity.Data
         {
             modelBuilder.Entity<Student>().ToTable("Student");
             modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
-            modelBuilder.Entity<Student>().ToTable("Course");
+            modelBuilder.Entity<Course>().ToTable("Course");
         }
     }
 }
