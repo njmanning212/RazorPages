@@ -2,12 +2,18 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ContosoUniversity.Data;
 using ContosoUniversity;
+using dotenv.net;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+DotEnv.Load();
+
+var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+
 builder.Services.AddDbContext<SchoolContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("SchoolContextSQLite")));
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -23,14 +29,6 @@ if (!app.Environment.IsDevelopment())
 else {
     app.UseDeveloperExceptionPage();
     app.UseMigrationsEndPoint();
-}
-
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<SchoolContext>();
-    context.Database.EnsureCreated();
-    DbInitializer.Initialze(context);
 }
 
 app.UseHttpsRedirection();
