@@ -40,9 +40,11 @@ namespace ContosoUniversity.Pages.Students
             {
                 _context.Students.Add(emptyStudent);
                 await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
             }
 
-            return RedirectToPage("./Index");
+            return Page();
+            
         }
     }
 }
